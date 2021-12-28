@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #663399;
+  --img-info-bg-color: rgba(119, 41, 236, 0.8);
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+
+.carousel-small-container {
+  width: 100vw;
+  overflow: hidden;
+}
+.carousel-small-title {
+  height: 8vw;
+  background-color: var(--main-bg-color);
+  font-size: 3.5vw;
+}
+.carousel-small-container {
+  width: 100vw;
+}
+.carousel-small-container img {
+  height: 40vh;
+  width: 49.3vw;
+  object-fit: fill;
+  border-radius: 5px;
+  margin: 0.3vw;
+  z-index: 0;
+}
+
+.btns-carousel-small {
+  width: 100vw;
+  height: 36vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-carousel-small {
+  width: 6vw;
+  height: 6vw;
+  z-index: 1;
+  left: 1vw;
+}
+.left-carousel-small {
+  width: 6vw;
+  height: 6vw;
+  z-index: 1;
+  right: 1vw;
+}
+
+.desc-container-small {
+  height: 34vh;
+  width: 100vw;
+  font-size: 3vw;
+}
+.hour-small {
+  background-color: var(--img-info-bg-color);
+  width: 15vw;
+  height: 3vh;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-info-small {
+  background-color: var(--img-info-bg-color);
+  width: 25vw;
+  height: 5vh;
+  border-radius: 5px;
+}
+
+/* BREAKFAST */
+.footer-title-small {
+  height: 8vw;
+  background-color: var(--main-bg-color);
+  font-size: 4vw;
+  width: 100vw;
+}
+
+.footer-dinning-card-small {
+  height: 14vh;
+}
+.restaurant-name-container-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant-name-small {
+  height: 3vh;
+  width: 97%;
+  background-color: var(--img-info-bg-color);
+  font-size: 3.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-card-container_items-small {
+  height: 11vh;
+}
+.dinning-icon-small {
+  height: 8vh;
+  background-color: white;
+}
+
+.restaurant-info-small {
+  font-size: 3.5vw;
+}
+
+/* FLYER */
+.footer-flyer-container-small {
+  height: 50vh;
+}
+.footer-flyer-img-small img {
+  object-position: fill;
+  height: 45vh;
+}
+
+
+.footer-barsQr-card-small {
+  font-size: 3.5vw;
+  background-color: var(--img-info-bg-color);
+  width: 95vw;
+  
+}
+.qr-small{
+    height: 20vh;
+}
+.barsQr-img-small {
+  height: 6vh;
+  background-color: white;
+  width: 40vw;
+}
+
+.qr-small img {
+  height: 18vh;
+  background-color: white;
+}
+.scanme-small {
+    font-size: 3.5vw;
+}
+
+.staff-container-small {
+  width: 100vw;
+  overflow: hidden;
+}
+.footer-staff-container-small {
+  height: 55vh;
+  width: 100vw;
+}
+.footer-staff-container-small img {
+  height: 50vh;
+  width: 75vw;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 0.3vw;
+  z-index: 0;
+}
+.staff-name-small{
+  background-color: var(--img-info-bg-color);
+  width: 50vw;
+  height: 5vh;
+  border-radius: 5px;
+  margin-top: 40vh;
+  font-size: 4vw;
+}
+.btns-staff-small {
+  width: 16vw;
+  height: 50vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-staff-small {
+  width: 6vw;
+  height: 6vw;
+  z-index: 1;
+  left: 92vw;
+}
+.left-staff-small {
+  width: 6vw;
+  height: 6vw;
+  z-index: 1;
+  left: 1vw;
+}
+
+
