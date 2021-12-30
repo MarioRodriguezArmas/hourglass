@@ -3,6 +3,7 @@ const { carouselStaff } = require('../models/carouselStaff')
 const { dinningItem } = require('../models/dinningItem')
 const { breakfastItem } = require('../models/breakfastItem')
 const { barItem } = require('../models/barItem')
+const { user } = require('../models/user')
 
 const controller = {
   // CAROUSEL ACTIVITIES
@@ -238,6 +239,55 @@ const controller = {
     try {
       console.log(req.body)
       const response = await barItem.findByIdAndUpdate(req.params.id, req.body, { new: true })
+      res.json({
+        msg: 'Updated',
+        data: response
+      })
+    } catch (error) {
+      console.log(error)
+      res.json({
+        msg: 'ERROR',
+        data: null
+      })
+    }
+  },
+  // USERS
+  postUser: async (req, res) => {
+    try {
+      console.log(req.body)
+      const response = await user.create(req.body)
+      res.json({
+        msg: 'Post User',
+        data: response
+      })
+    } catch (error) {
+      console.log(error)
+      res.json({
+        msg: 'ERROR',
+        data: null
+      })
+    }
+  },
+  getUsers: async (req, res) => {
+    try {
+      console.log(req.body)
+      const usuarios = await user.find(req.body)
+      res.json({
+        msg: 'All Users',
+        data: usuarios
+      })
+    } catch (error) {
+      console.log(error)
+      res.json({
+        msg: 'ERROR',
+        data: null
+      })
+    }
+  },
+  putOneUser: async (req, res) => {
+    try {
+      console.log(req.body)
+      const response = await user.findByIdAndUpdate(req.params.id, req.body, { new: true })
       res.json({
         msg: 'Updated',
         data: response

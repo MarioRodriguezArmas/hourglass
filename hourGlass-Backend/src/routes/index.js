@@ -22,4 +22,8 @@ router.post('/bars', controller.postBarItem)
 router.get('/bars', controller.getAllBarItem)
 router.put('/bars/:id', controller.putOneBarItem)
 
+router.post('/user', controller.postUser)
+router.get('/user', controller.getUsers)
+router.put('/user/:id', controller.putOneUser)
+
 module.exports = router
