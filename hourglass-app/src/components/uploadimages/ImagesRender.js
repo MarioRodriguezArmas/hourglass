@@ -38,7 +38,7 @@ function ImagesRender() {
     <>
       <form onSubmit={submitHandler}>
         <input type="file" onChange={fileHandler} />
-        <input type="text" name="name" placeholder="NAME" />
+        <input type="text" name="name" placeholder="Name" />
         <button>Post</button>
       </form>
       <ul>

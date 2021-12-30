@@ -1,14 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
-import { CarouselInfo } from "./CarouselInfo";
+import React, { useState, useRef} from "react";
+import { SetCarouselInfo } from "./SetCarouselInfo";
 import carouselElement from "./Sources";
 import carouselElement2 from "./Source2";
 
-function CarouselRender() {
+function SetCarouselRender() {
   const [carouselItem] = useState(carouselElement);
   const [carouselItem2] = useState(carouselElement2);
 
   const slideshow = useRef(null);
-  const intervalSlideshow = useRef(null);
+  
 
   const next = () => {
     if (slideshow.current.children.length > 0) {
@@ -40,19 +40,7 @@ function CarouselRender() {
     }
   };
 
-  // useEffect(() => {
-  //   intervalSlideshow.current = setInterval(() => {
-  //     next();
-  //   }, 5000);
-  //   slideshow.current.addEventListener("mouseenter", () => {
-  //     clearInterval(intervalSlideshow.current);
-  //   });
-  //   slideshow.current.addEventListener("mouseleave", () => {
-  //     intervalSlideshow.current = setInterval(() => {
-  //       next();
-  //     }, 5000);
-  //   });
-  // }, []);
+
 
   return (
  <div className="d-none d-md-block">
@@ -73,7 +61,7 @@ function CarouselRender() {
         <div className="slide1 d-flex justify-content-center flex-row position-relative">
           {carouselItem.map((cItem, index) => {
             return (
-              <CarouselInfo
+              <SetCarouselInfo
                 key={index}
                 img={cItem.img}
                 hour={cItem.hour}
@@ -86,7 +74,7 @@ function CarouselRender() {
         <div className="slide2 d-flex justify-content-center flex-row position-relative">
           {carouselItem2.map((cItem, index) => {
             return (
-              <CarouselInfo
+              <SetCarouselInfo
                 key={index}
                 img={cItem.img}
                 hour={cItem.hour}
@@ -102,4 +90,4 @@ function CarouselRender() {
   );
 }
 
-export default CarouselRender;
+export default SetCarouselRender;

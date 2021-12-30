@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import SetCarouselRender from "../components/setdataui/carousel/SetCarouselRender";
+import SetCarouselSmallRender from "../components/carousel/CarouselSmallRender";
+import SetFooterRender from "../components/setdataui/footer/SetFooterRender";
 
 function Monday() {
-    return (
-        <div>
-            I am a viewDay !!
-        </div>
-    )
+  return (
+    <>
+      <SetCarouselRender />
+      <SetCarouselSmallRender />
+      <SetFooterRender />
+    </>
+  );
 }
 
-export default Monday
+export default Monday;

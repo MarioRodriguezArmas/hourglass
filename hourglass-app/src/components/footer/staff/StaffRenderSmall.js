@@ -38,19 +38,19 @@ function StaffRenderSmall() {
       }, 30);
     }
   };
-  useEffect(() => {
-    intervalSlideshow.current = setInterval(() => {
-      next();
-    }, 5000);
-    slideshow.current.addEventListener("mouseenter", () => {
-      clearInterval(intervalSlideshow.current);
-    });
-    slideshow.current.addEventListener("mouseleave", () => {
-      intervalSlideshow.current = setInterval(() => {
-        next();
-      }, 5000);
-    });
-  }, []);
+  // useEffect(() => {
+  //   intervalSlideshow.current = setInterval(() => {
+  //     next();
+  //   }, 5000);
+  //   slideshow.current.addEventListener("mouseenter", () => {
+  //     clearInterval(intervalSlideshow.current);
+  //   });
+  //   slideshow.current.addEventListener("mouseleave", () => {
+  //     intervalSlideshow.current = setInterval(() => {
+  //       next();
+  //     }, 5000);
+  //   });
+  // }, []);
   return (
     <div className="staff-container-small  d-md-none">
       <div className="">

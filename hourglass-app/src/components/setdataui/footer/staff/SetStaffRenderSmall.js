@@ -1,12 +1,12 @@
-import React, { useState, useRef,useEffect } from "react";
-import staff from "./SourceStaff";
-import StaffInfo from "./StaffInfo";
+import React, { useState, useRef } from "react";
+import staff from "./SetSourceStaff";
+import StaffInfoSmall from "./SetStaffInfoSmall";
 
-function StaffRender() {
+function SetStaffRenderSmall() {
   const [staffInfo] = useState(staff);
 
   const slideshow = useRef(null);
-  const intervalSlideshow = useRef(null);
+
 
   const next = () => {
     if (slideshow.current.children.length > 0) {
@@ -38,36 +38,24 @@ function StaffRender() {
       }, 30);
     }
   };
-  // useEffect(() => {
-  //   intervalSlideshow.current = setInterval(() => {
-  //     next();
-  //   }, 5000);
-  //   slideshow.current.addEventListener("mouseenter", () => {
-  //     clearInterval(intervalSlideshow.current);
-  //   });
-  //   slideshow.current.addEventListener("mouseleave", () => {
-  //     intervalSlideshow.current = setInterval(() => {
-  //       next();
-  //     }, 5000);
-  //   });
-  // }, []);
+  
   return (
-    <div className="staff-container col-2 d-none d-md-block">
+    <div className="staff-container-small  d-md-none">
       <div className="">
-        <div className="footer-title d-flex justify-content-center align-items-center ">
+        <div className="footer-title-small  d-flex justify-content-center align-items-center ">
           STAFF
         </div>
-        <div className="btns-staff">
-          <button className="right-staff position-absolute" onClick={next}>
+        <div className="btns-staff-small">
+          <button className="right-staff-small position-absolute" onClick={next}>
             R
           </button>
-          <button className="left-staff position-absolute" onClick={prev}>
+          <button className="left-staff-small position-absolute" onClick={prev}>
             L
           </button>
         </div>
-        <div className="renderStaff d-flex position-relative" ref={slideshow}>
+        <div className="renderStaff-small d-flex position-relative" ref={slideshow}>
           {staffInfo.map((sItem, index) => {
-            return <StaffInfo key={index} img={sItem.img} name={sItem.name} />;
+            return <StaffInfoSmall key={index} img={sItem.img} name={sItem.name} />;
           })}
         </div>
       </div>
@@ -75,4 +63,4 @@ function StaffRender() {
   );
 }
 
-export default StaffRender;
+export default SetStaffRenderSmall;

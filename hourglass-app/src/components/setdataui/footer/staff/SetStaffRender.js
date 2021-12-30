@@ -1,12 +1,12 @@
-import React, { useState, useRef,useEffect } from "react";
-import staff from "./SourceStaff";
-import StaffInfo from "./StaffInfo";
+import React, { useState, useRef } from "react";
+import staff from "./SetSourceStaff";
+import StaffInfo from "./SetStaffInfo";
 
-function StaffRender() {
+function SetStaffRender() {
   const [staffInfo] = useState(staff);
 
   const slideshow = useRef(null);
-  const intervalSlideshow = useRef(null);
+ 
 
   const next = () => {
     if (slideshow.current.children.length > 0) {
@@ -38,19 +38,7 @@ function StaffRender() {
       }, 30);
     }
   };
-  // useEffect(() => {
-  //   intervalSlideshow.current = setInterval(() => {
-  //     next();
-  //   }, 5000);
-  //   slideshow.current.addEventListener("mouseenter", () => {
-  //     clearInterval(intervalSlideshow.current);
-  //   });
-  //   slideshow.current.addEventListener("mouseleave", () => {
-  //     intervalSlideshow.current = setInterval(() => {
-  //       next();
-  //     }, 5000);
-  //   });
-  // }, []);
+
   return (
     <div className="staff-container col-2 d-none d-md-block">
       <div className="">
@@ -75,4 +63,4 @@ function StaffRender() {
   );
 }
 
-export default StaffRender;
+export default SetStaffRender;

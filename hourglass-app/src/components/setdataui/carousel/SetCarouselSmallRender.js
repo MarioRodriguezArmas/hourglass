@@ -1,12 +1,12 @@
-import React, { useState, useRef,useEffect } from "react";
-import staff from "./SourceStaff";
-import StaffInfo from "./StaffInfo";
+import React, { useState, useRef} from "react";
+import carouselElementSmall from "./SourceSmall";
+import { CarouselSmallInfo } from "./SetCarouselSmallInfo";
 
-function StaffRender() {
-  const [staffInfo] = useState(staff);
+function SetCarouselSmallRender() {
+  const [carouselItem] = useState(carouselElementSmall);
 
   const slideshow = useRef(null);
-  const intervalSlideshow = useRef(null);
+ 
 
   const next = () => {
     if (slideshow.current.children.length > 0) {
@@ -38,36 +38,32 @@ function StaffRender() {
       }, 30);
     }
   };
-  // useEffect(() => {
-  //   intervalSlideshow.current = setInterval(() => {
-  //     next();
-  //   }, 5000);
-  //   slideshow.current.addEventListener("mouseenter", () => {
-  //     clearInterval(intervalSlideshow.current);
-  //   });
-  //   slideshow.current.addEventListener("mouseleave", () => {
-  //     intervalSlideshow.current = setInterval(() => {
-  //       next();
-  //     }, 5000);
-  //   });
-  // }, []);
+
   return (
-    <div className="staff-container col-2 d-none d-md-block">
+    <div className="carousel-small-container d-md-none">
       <div className="">
-        <div className="footer-title d-flex justify-content-center align-items-center ">
-          STAFF
+        <div className="carousel-small-title d-flex justify-content-center align-items-center ">
+          OUR ACTIVITIES
         </div>
-        <div className="btns-staff">
-          <button className="right-staff position-absolute" onClick={next}>
+        <div className="btns-carousel-small">
+          <button className="right-carousel-small position-absolute" onClick={next}>
             R
           </button>
-          <button className="left-staff position-absolute" onClick={prev}>
+          <button className="left-carousel-small position-absolute" onClick={prev}>
             L
           </button>
         </div>
-        <div className="renderStaff d-flex position-relative" ref={slideshow}>
-          {staffInfo.map((sItem, index) => {
-            return <StaffInfo key={index} img={sItem.img} name={sItem.name} />;
+        <div className="render-carousel-small col-12 d-flex position-relative" ref={slideshow}>
+          {carouselItem.map((sItem, index) => {
+            return (
+              <CarouselSmallInfo
+                key={index}
+                img={sItem.img}
+                hour={sItem.hour}
+                activity={sItem.activity}
+                location={sItem.location}
+              />
+            );
           })}
         </div>
       </div>
@@ -75,4 +71,4 @@ function StaffRender() {
   );
 }
 
-export default StaffRender;
+export default SetCarouselSmallRender;
