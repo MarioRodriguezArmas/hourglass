@@ -203,4 +203,7 @@ body {
   right: 14.3vw;
 }
 
-
+.navbar{
+  width: 100vw;
+  height: 17vh;
+}

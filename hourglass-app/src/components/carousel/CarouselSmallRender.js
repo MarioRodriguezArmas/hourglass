@@ -2,7 +2,7 @@ import React, { useState, useRef} from "react";
 import carouselElementSmall from "./SourceSmall";
 import { CarouselSmallInfo } from "./CarouselSmallInfo";
 
-function StaffRender() {
+function CarouselSmallRender() {
   const [carouselItem] = useState(carouselElementSmall);
 
   const slideshow = useRef(null);
@@ -71,4 +71,4 @@ function StaffRender() {
   );
 }
 
-export default StaffRender;
+export default CarouselSmallRender;
